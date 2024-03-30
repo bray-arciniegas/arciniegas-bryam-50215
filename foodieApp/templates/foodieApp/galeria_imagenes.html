@@ -1,0 +1,35 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<div class="separadorFoodie tituloFoodie">
+    <h1>Galería de Imágenes</h1>
+    {% if user.is_authenticated %}
+    <a class="add" href="{% url 'agregar_imagen' %}">Agregar Imagen</a>
+    {% endif %}
+</div>
+
+<div class="galeria">
+    {% for imagen in imagenes %}
+        <div class="imagenTarjeta">
+            <div>
+            <img class="imagenGaleria" src="{{ imagen.imagen.url }}" alt="Imagen">
+            </div>
+            {% if request.user.is_staff %}
+            <div>
+                <a class="btn btn-primary" href="{% url 'editar_imagen' imagen.id %}">Editar</a>
+                <form method="post" action="{% url 'eliminar_imagen' imagen.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-danger" value="Eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar este imagen?')">
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No hay imágenes disponibles.</p>
+    {% endfor %}
+</div>
+
+{% endblock contenido %}

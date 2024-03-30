@@ -1,0 +1,163 @@
+body {
+    background-color: #ffffff;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5% 0;
+    text-shadow: 5px 5px 0px rgba(255, 196, 33); /* Ajusta los valores según tus preferencias */
+}
+
+.estructura {
+    margin: 0 10%;
+    padding: 0% 5%;
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #242424;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    background-color: #242424;
+    color: rgb(255, 196, 33);
+    border-radius: 10px;
+}
+
+.nav-item {
+    margin-right: 2%;
+    width: 150px;
+    text-align: center;
+}
+
+.tituloFoodie {
+    text-align: center;
+    margin: 5% 0;
+}
+
+.separadorFoodie {
+    display: block;
+    justify-content: center;
+}
+
+.add {
+    text-decoration: none;
+    color: #242424;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.add:hover {
+    color: rgb(255, 196, 33);
+    transition: all 0.2s;
+}
+
+.imagenReceta {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.contenedorImagen {
+    width: 500px; /* Ancho deseado del contenedor */
+    height: 300px; /* Alto deseado del contenedor */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.imagenBanner {
+    max-width: 100%; /* Ajusta la imagen al tamaño máximo del contenedor */
+    max-height: 100%; /* Ajusta la imagen al tamaño máximo del contenedor */
+    border-radius: 10px;
+}
+
+.receta {
+    display: flex;
+    margin: 5%;
+}
+
+.contenido {
+    margin: auto 5%;
+}
+
+.contenidoTip {
+    margin-bottom: 5%;
+    color: #242424;
+    background-color: rgb(255, 196, 33);
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imagenTarjeta {
+    display: block;
+    margin: 0 1%;
+}
+
+.imagenGaleria {
+    width: 350px;
+    height: 350px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+form {
+    font-weight: bold;
+    margin-top: 10%;
+    text-align: center;
+}
+
+form button {
+    border: none;
+    background-color: rgb(255, 196, 33);
+    color: #242424;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 1%;
+}
+
+form input {
+    display: block;
+    margin: 0 auto;
+}
+
+.contenedor1 {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor2 {
+    width: 50%;
+}
+
+.contenedorSobremi {
+    width: 30%;
+}
+
+.portada {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.portada2 {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info {
+    padding: 0 5%;
+    margin: auto auto;
+}

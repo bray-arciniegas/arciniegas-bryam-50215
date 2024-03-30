@@ -1,0 +1,26 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="contenedor1">
+    <div class="contenedor2">
+        <img class="portada" src="{% static 'images/portada.png' %}">
+    </div>
+    <div class="contenedor2">
+        <h6 class="info">Bienvenido a Foodie, tu destino culinario para descubrir nuevas y emocionantes recetas.
+
+            <br><br>En Foodie, nos apasiona compartir deliciosas recetas de cocina de todo el mundo. Desde platos tradicionales hasta creaciones innovadoras, nuestro objetivo es inspirarte en la cocina y ayudarte a llevar tus habilidades culinarias al siguiente nivel.
+            
+            <br><br>¿Buscas nuevas ideas para el desayuno, el almuerzo o la cena? ¿Quieres sorprender a tus invitados con una comida impresionante? ¡Estás en el lugar correcto! Explora nuestra colección de recetas cuidadosamente seleccionadas y encuentra la inspiración que necesitas para crear comidas memorables en tu propia cocina.
+            
+            <br><br>Nuestro equipo de chefs y entusiastas de la comida está constantemente agregando nuevas recetas, consejos útiles y tutoriales paso a paso para garantizar que tengas todo lo que necesitas para triunfar en la cocina. Además, ofrecemos opciones para todos los gustos y preferencias dietéticas, incluidas recetas vegetarianas, veganas, sin gluten y más.
+            
+            <br><br>¡Únete a nuestra comunidad culinaria hoy mismo y comienza tu viaje hacia una experiencia gastronómica inolvidable!</h6>
+    </div>
+</div>
+
+{% endblock contenido %}

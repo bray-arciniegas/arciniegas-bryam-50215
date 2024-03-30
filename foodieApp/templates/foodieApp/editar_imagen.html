@@ -1,0 +1,14 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<h1>Editar Imagen</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar Cambios</button>
+</form>
+
+{% endblock contenido %}

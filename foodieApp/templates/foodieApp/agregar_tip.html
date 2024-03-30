@@ -1,0 +1,17 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<div class="separadorFoodie tituloFoodie">
+    <h1>Añadir Tip</h1>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar Tip</button>
+</form>
+
+{% endblock contenido %}

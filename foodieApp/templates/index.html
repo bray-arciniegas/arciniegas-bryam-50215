@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    {% load static %}
+    <link href="{% static  'css/styles.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+</head>
+
+<body>
+    <div class="estructura">
+        <div>
+            <h1 class="logo">FOODIE</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-transparent">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/recetario/">Cocina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/coctelero/">Cocteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/tips/">Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/galeria/">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sobremi/">Sobre mi</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            {% if user.userprofile.avatar %}
+                            <img src="{{ user.userprofile.avatar.url }}" alt="Avatar"
+                                style="width: 40px; height: 40px; border-radius: 50%;">
+                            {% else %}
+                            <img src="{% static 'images/default_avatar.png' %}" alt="Avatar por defecto"
+                                style="width: 40px; height: 40px; border-radius: 50%;">
+                            {% endif %}
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'configuracion_usuario' %}">Hola, {{ user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block contenido %}
+
+        {% endblock contenido %}
+
+    </div>
+</body>
+
+</html>

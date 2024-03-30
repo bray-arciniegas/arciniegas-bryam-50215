@@ -1,0 +1,15 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<div class="formUsuario">
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrarse</button>
+</form>
+</div>
+
+{% endblock contenido %}

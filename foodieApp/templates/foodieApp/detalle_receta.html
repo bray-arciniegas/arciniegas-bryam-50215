@@ -1,0 +1,23 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<div class="receta">
+    <div>
+    <img class="imagenReceta" src="{{ receta.imagen.url }}" alt="">
+    </div>
+    <div class="contenido">
+        <h3>{{ receta.titulo }}</h3>
+        <h6>{{receta.descripcion}}</h6>
+        <p>Autor: {{receta.autor}}</p>
+        <p>Fecha de Publicación: {{ receta.fecha_publicacion }}</p>
+    </div>
+</div>
+    <p>Ingredientes:</p>
+    <p>{{ receta.ingredientes }}</p>
+    <p>Instrucciones:</p>
+    <p>{{ receta.instrucciones }}</p>
+
+{% endblock contenido %}

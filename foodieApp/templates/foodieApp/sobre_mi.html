@@ -1,0 +1,20 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="contenedor1">
+    <div class="contenedorSobremi">
+        <img class="portada2" src="{% static 'images/sobremi.jpg' %}">
+    </div>
+    <div class="contenedor2">
+        <h2 class="info">¡Buen dia!</h2>
+        <h6 class="info"><br>Parto diciendo que mi nombre es Bryam Arciniegas, tengo 30 años y vivo en Santiago de Chile.
+            <br><br>Lo mas importante y relevante sobre mi en estos momentos es que fui padre de una pequeña que actualmente tiene 5 meses, y es la razón y motivo por lo cual empece a darle un rumbo diferente a mi vida, y es por eso que llegue a este curso de Python. Empezando desde 0, siendo autodidacta y con compañeros muy buenos que han servido para seguir aprendiendo y mejorando en este camino tan difícil que es la programación.</h6>
+    </div>
+</div>
+
+{% endblock contenido %}

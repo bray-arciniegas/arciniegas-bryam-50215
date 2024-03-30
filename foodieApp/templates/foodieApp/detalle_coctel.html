@@ -1,0 +1,24 @@
+<title>Foodie</title>
+
+{% extends 'index.html' %}
+
+{% block contenido %}
+
+<div class="receta">
+    <div>
+        <img class="imagenReceta" src="{{ coctel.imagen.url }}" alt="">
+    </div>
+    <div class="contenido">
+        <h3>{{ coctel.titulo }}</h3>
+        <h6>{{ coctel.descripcion }}</h6>
+        <p>Autor: {{ coctel.autor }}</p>
+        <p>Fecha de Publicación: {{ coctel.fecha_publicacion }}</p>
+    </div>
+</div>
+
+<p>Ingredientes:</p>
+<p>{{ coctel.ingredientes }}</p>
+<p>Instrucciones:</p>
+<p>{{ coctel.instrucciones }}</p>
+
+{% endblock contenido %}
