@@ -2,6 +2,7 @@
 
 ### Foodie
 Foodie es una web tipo blog enfocada en recetas tanto de cocina como de cocteleria.
+[Video de la web](https://youtu.be/BGeTXlFXqf8)
 
 ### Modelos
 Recetas - Crear recetas con descripciones, ingredientes e instrucciones
