@@ -11,3 +11,7 @@ Imagenes - Compartir imagenes de diversos platos a modo de galeria
 
 ### Uso
 Cualquier usuario registrado podra añadir tips, recetas y fotos, pero solo los usuarios de tipo admin podran editar y borar los elementos.
+
+### Usuarios
+Se creo el usuario de administrador para hacer pruebas | Usuario: admin || Contraseña: admin1234
+
